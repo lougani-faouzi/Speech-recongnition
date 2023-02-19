@@ -22,7 +22,7 @@ def select_label(pin):
     label_index = (label_index + 1) % len(speech_model.labels)
     lcd.fill(0)
     lcd.text(speech_model.labels[label_index], 10, 30, 0xffff)
-    lcd.show()
+    lcd.show() 
 
 Pin(39, Pin.IN).irq(handler=select_label, trigger=Pin.IRQ_FALLING)
 gc.collect()
@@ -39,7 +39,7 @@ while True:
         vibrator.value(1)
         sleep(0.5) # On fait un sleep de 0.5 secondes 
     vibrator.value(0)    
-    lcd.fill(0) # des paramettre pour tester si la reconnaissance est ok sans le vibreur
+    lcd.fill(0) # tester si la reconnaissance est ok sans le vibreur mais en affichant sur l ecran
     lcd.text(label, 10, 30, 0xffff)
     lcd.text(str(prob), 10, 50, 0xffff)
     lcd.show()
