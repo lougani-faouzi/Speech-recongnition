@@ -4,15 +4,15 @@ import speech_model
 from machine import I2S, PWM, Pin, reset
 from time import sleep
 
+#LE PIN ASSOCIE AU VIBREUR POUR BRANCHEMENT M5STICK C PLUS
 vibrator = Pin(25, Pin.OUT)
   
-# Use the M5StickC built-in microphone.
+# Utilisation du protocole I2S du m5stick c plus 
 mic = I2S(I2S.NUM0, ws=Pin(0), sdin=Pin(34), mode=I2S.MASTER_PDW,
     dataformat=I2S.B16, channelformat=I2S.ONLY_RIGHT,
     samplerate=16000, dmacount=16, dmalen=256)
 lcd = m5stickc_lcd.ST7735()
-# M5StickC is capable of running one model inference every 224ms.
-# 7168 / (16000 * 2) = 0.224
+# initialisation frequence
 buffer = bytearray(7168)
 label = ''
 label_index = -1
@@ -35,11 +35,11 @@ while True:
         continue
     label = l
     speech_model.snapshot()
-    if label == 'LILI': # Replace with your own label.
+    if label == 'LILI': # SI ON DETECTE L ETIQUETTE LILI donc on active le vibreur 
         vibrator.value(1)
-        sleep(0.5)
+        sleep(0.5) # On fait un sleep de 0.5 secondes 
     vibrator.value(0)    
-    lcd.fill(0)
+    lcd.fill(0) # des paramettre pour tester si la reconnaissance est ok sans le vibreur
     lcd.text(label, 10, 30, 0xffff)
     lcd.text(str(prob), 10, 50, 0xffff)
     lcd.show()
