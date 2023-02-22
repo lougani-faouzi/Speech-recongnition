@@ -38,6 +38,8 @@ while True:
     if label == 'LILI': # SI ON DETECTE L ETIQUETTE LILI donc on active le vibreur 
         vibrator.value(1)
         sleep(0.5) # On fait un sleep de 0.5 secondes 
+    #if label == '[OTHER]'
+    #vibrator.value(1)
     vibrator.value(0)    
     lcd.fill(0) # tester si la reconnaissance est ok sans le vibreur mais en affichant sur l ecran
     lcd.text(label, 10, 30, 0xffff)
