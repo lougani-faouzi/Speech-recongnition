@@ -1,0 +1,24 @@
+# Name detector project
+  -Ajout du fichier JSON de données de reconnaissance vocale a un dossier tinkerdoodle (le telecharger ici) 
+#+BEGIN_SRC bash
+https://www.tensorflow.org/datasets/catalog/speech_commands
+#+END_SRC
+  -Utilisation de l'interface
+#+BEGIN_SRC bash
+Étape 1: ajouter 20 échantillons audio d'une seconde pour chaque NOM et les étiqueter.
+#+END_SRC
+
+#+BEGIN_SRC bash
+Étape 2: ajouter 1....N échantillons audio d'une seconde pour le bruit et les étiqueter.
+#+END_SRC
+
+#+BEGIN_SRC bash
+Étape 3: Entraînement du modèle, et vérification.
+#+END_SRC
+
+#+BEGIN_SRC bash
+Étape 4: Télécharger le modèle (data.py) et l'ecrire avec la commande %writefile dans un document Tinkerdoodle.
+#+END_SRC
+
+
+Resources/explanation are available on report
