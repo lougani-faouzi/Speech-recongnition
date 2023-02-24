@@ -36,3 +36,5 @@ Interface d’apprentissage https://github.com/lougani-faouzi/Speech-recongnitio
 #+END_SRC
 
 Resources/explanation are available on report
+
+by LOUGANI FAOUZI 
