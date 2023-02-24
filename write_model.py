@@ -1,3 +1,4 @@
+# pour l'usage de ce code se referer au ReadMe de ce projet 
 import gc
 import m5stickc_lcd
 import speech_model
