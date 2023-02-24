@@ -1,4 +1,4 @@
-# Name detector project
+# Name detector project 
   -Ajout du fichier JSON de données de reconnaissance vocale a un dossier tinkerdoodle (le telecharger ici) 
 #+BEGIN_SRC bash
 https://www.tensorflow.org/datasets/catalog/speech_commands
@@ -20,5 +20,16 @@ https://www.tensorflow.org/datasets/catalog/speech_commands
 Étape 4: Télécharger le modèle (data.py) et l'ecrire avec la commande %writefile dans un document Tinkerdoodle.
 #+END_SRC
 
+#+BEGIN_SRC bash
+Code mycropython pour controller le vibreur https://github.com/lougani-faouzi/Speech-recongnition/blob/main/write_model.py
+#+END_SRC
+
+#+BEGIN_SRC bash
+Modèle entraîné exporté après apprentissage https://github.com/lougani-faouzi/Speech-recongnition/blob/main/data.py 
+#+END_SRC
+
+#+BEGIN_SRC bash
+Interface d’apprentissage https://github.com/lougani-faouzi/Speech-recongnition/blob/main/speech-commands.html
+#+END_SRC
 
 Resources/explanation are available on report
